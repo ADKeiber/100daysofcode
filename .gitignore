@@ -2,3 +2,5 @@
 *
 # Except for the themes directories:
 flutter_tutorial/lib/*
+# Un-ignore the affected subdirectory
+!/flutter_tutorial/lib/*
