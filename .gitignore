@@ -1,6 +1,7 @@
-# Ignore everything:
-*
-# Except for the themes directories:
-flutter_tutorial/lib/*
-# Un-ignore the affected subdirectory
-!/flutter_tutorial/lib/*
+flutter_tutorial/.dart_tool/*
+flutter_tutorial/.idea/*
+flutter_tutorial/android/*
+flutter_tutorial/ios/*
+flutter_tutorial/test/*
+flutter_tutorial/.gitignore
+flutter_tutorial/.metadata
