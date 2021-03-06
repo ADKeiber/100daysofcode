@@ -5,3 +5,12 @@ flutter_tutorial/ios/*
 flutter_tutorial/test/*
 flutter_tutorial/.gitignore
 flutter_tutorial/.metadata
+
+
+finance_tracker/.dart_tool/*
+finance_tracker/.idea/*
+finance_tracker/android/*
+finance_tracker/ios/*
+finance_tracker/test/*
+finance_tracker/.gitignore
+finance_tracker/.metadata
