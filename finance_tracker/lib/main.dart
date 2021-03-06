@@ -30,6 +30,10 @@ class MyHomePage extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
+
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,9 +57,11 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     TextField(
                       decoration: InputDecoration(labelText: "Title"),
+                      controller: titleController,
                     ),
                     TextField(
                       decoration: InputDecoration(labelText: "Amount"),
+                      controller: amountController,
                     ),
                     TextButton(
                       child: Text(
