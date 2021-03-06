@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import './transaction.dart';
 
@@ -46,6 +47,31 @@ class MyHomePage extends StatelessWidget {
               ),
               elevation: 5,
             ),
+            Card(
+              child: Container(
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(labelText: "Title"),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: "Amount"),
+                    ),
+                    TextButton(
+                      child: Text(
+                        "Add transaction",
+                        style: TextStyle(
+                          color: Colors.purple,
+                        ),
+                      ),
+                      onPressed: () {},
+                    ),
+                  ],
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                ),
+                padding: EdgeInsets.all(10),
+              ),
+            ),
             Column(
               children: transactions.map((tx) {
                 return Card(
@@ -53,7 +79,7 @@ class MyHomePage extends StatelessWidget {
                     children: [
                       Container(
                         child: Text(
-                          tx.cost.toString(),
+                          " \$${tx.cost}",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
@@ -82,7 +108,7 @@ class MyHomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            tx.date.toString(),
+                            DateFormat('MM/dd/yyyy HH:mm').format(tx.date),
                             style: TextStyle(
                               color: Colors.grey,
                             ),
@@ -96,7 +122,7 @@ class MyHomePage extends StatelessWidget {
               }).toList(),
             ),
           ],
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
         ),
       ),
