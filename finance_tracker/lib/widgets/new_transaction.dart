@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 
 class NewTransaction extends StatefulWidget {
   final Function submitTrans;
@@ -15,7 +16,9 @@ class _NewTransactionState extends State<NewTransaction> {
 
   final amountController = TextEditingController();
 
-  void submitData() {
+  DateTime _selectedDate = DateTime.now();
+
+  void _submitData() {
     final enteredTitle = titleController.text;
     final enteredAmount = double.parse(amountController.text);
     if (enteredTitle.isEmpty || enteredAmount <= 0) {
@@ -24,8 +27,25 @@ class _NewTransactionState extends State<NewTransaction> {
     widget.submitTrans(
       enteredTitle,
       enteredAmount,
+      _selectedDate,
     );
     Navigator.of(context).pop();
+  }
+
+  void _presentDatePicker() {
+    showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2021),
+      lastDate: DateTime.now(),
+    ).then((date) {
+      if (date != null) {
+        setState(() {
+          _selectedDate = date;
+        });
+      }
+      return;
+    });
   }
 
   @override
@@ -39,21 +59,25 @@ class _NewTransactionState extends State<NewTransaction> {
               TextField(
                 decoration: InputDecoration(labelText: "Title"),
                 controller: titleController,
-                onSubmitted: (_) => submitData(),
+                onSubmitted: (_) => _submitData(),
               ),
               TextField(
                 decoration: InputDecoration(labelText: "Amount"),
                 controller: amountController,
                 keyboardType: TextInputType.number,
-                onSubmitted: (_) => submitData(),
+                onSubmitted: (_) => _submitData(),
               ),
               Container(
                 height: 70,
                 child: Row(
                   children: [
-                    Text("No Date Chosen!"),
+                    Expanded(
+                      child: Text(
+                        "Date:   ${DateFormat.yMd().format(_selectedDate)}",
+                      ),
+                    ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: _presentDatePicker,
                       child: Text(
                         "Choose Date",
                         style: TextStyle(
@@ -89,7 +113,7 @@ class _NewTransactionState extends State<NewTransaction> {
                         color: Theme.of(context).buttonColor,
                       ),
                     ),
-                    onPressed: submitData,
+                    onPressed: _submitData,
                   ),
                 ),
               ),
@@ -102,14 +126,3 @@ class _NewTransactionState extends State<NewTransaction> {
     );
   }
 }
-
-
-// TextButton(
-//                     child: Text(
-//                       "Add transaction",
-//                       style: TextStyle(
-//                         color: Colors.purple,
-//                       ),
-//                     ),
-//                     onPressed: submitData,
-//                   ),
