@@ -30,34 +30,40 @@ class _NewTransactionState extends State<NewTransaction> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Container(
-        child: Column(
-          children: [
-            TextField(
-              decoration: InputDecoration(labelText: "Title"),
-              controller: titleController,
-              onSubmitted: (_) => submitData(),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: "Amount"),
-              controller: amountController,
-              keyboardType: TextInputType.number,
-              onSubmitted: (_) => submitData(),
-            ),
-            TextButton(
-              child: Text(
-                "Add transaction",
-                style: TextStyle(
-                  color: Colors.purple,
-                ),
+    return SingleChildScrollView(
+      child: Card(
+        child: Container(
+          height: MediaQuery.of(context).size.height * .5,
+          child: Column(
+            children: [
+              TextField(
+                decoration: InputDecoration(labelText: "Title"),
+                controller: titleController,
+                onSubmitted: (_) => submitData(),
               ),
-              onPressed: submitData,
-            ),
-          ],
-          crossAxisAlignment: CrossAxisAlignment.end,
+              TextField(
+                decoration: InputDecoration(labelText: "Amount"),
+                controller: amountController,
+                keyboardType: TextInputType.number,
+                onSubmitted: (_) => submitData(),
+              ),
+              Row(
+                children: [],
+              ),
+              TextButton(
+                child: Text(
+                  "Add transaction",
+                  style: TextStyle(
+                    color: Colors.purple,
+                  ),
+                ),
+                onPressed: submitData,
+              ),
+            ],
+            crossAxisAlignment: CrossAxisAlignment.end,
+          ),
+          padding: EdgeInsets.all(10),
         ),
-        padding: EdgeInsets.all(10),
       ),
     );
   }
