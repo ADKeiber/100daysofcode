@@ -47,17 +47,51 @@ class _NewTransactionState extends State<NewTransaction> {
                 keyboardType: TextInputType.number,
                 onSubmitted: (_) => submitData(),
               ),
-              Row(
-                children: [],
+              Container(
+                height: 70,
+                child: Row(
+                  children: [
+                    Text("No Date Chosen!"),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Choose Date",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              TextButton(
-                child: Text(
-                  "Add transaction",
-                  style: TextStyle(
-                    color: Colors.purple,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(5.0),
+                child: Container(
+                  height: 40.0,
+                  margin: const EdgeInsets.only(
+                    bottom: 6.0,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0),
+                    color: Theme.of(context).primaryColor,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0.0, 1.0),
+                        blurRadius: 6.0,
+                      ),
+                    ],
+                  ),
+                  child: TextButton(
+                    child: Text(
+                      "Add transaction",
+                      style: TextStyle(
+                        color: Theme.of(context).buttonColor,
+                      ),
+                    ),
+                    onPressed: submitData,
                   ),
                 ),
-                onPressed: submitData,
               ),
             ],
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -68,3 +102,14 @@ class _NewTransactionState extends State<NewTransaction> {
     );
   }
 }
+
+
+// TextButton(
+//                     child: Text(
+//                       "Add transaction",
+//                       style: TextStyle(
+//                         color: Colors.purple,
+//                       ),
+//                     ),
+//                     onPressed: submitData,
+//                   ),

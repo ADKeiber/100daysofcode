@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Personal Expenses',
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        accentColor: Colors.amber,
+        accentColor: Colors.blue[200],
         fontFamily: "Quicksand",
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
@@ -22,6 +22,9 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'OpenSans',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                ),
+                button: TextStyle(
+                  color: Colors.white,
                 ),
               ),
         ),
