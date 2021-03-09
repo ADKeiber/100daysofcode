@@ -16,3 +16,4 @@ finance_tracker/.gitignore
 finance_tracker/.metadata
 finance_tracker/build/*
 finance_tracker/.packages
+.vscode/launch.json
