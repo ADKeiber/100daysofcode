@@ -12,21 +12,25 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _userTransactions.isEmpty
-        ? Column(
-            children: [
-              Text(
-                "No Transactions",
-                style: Theme.of(context).textTheme.headline6,
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 15),
-                height: 200,
-                child: Image.asset(
-                  "assets/images/waiting.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
+        ? LayoutBuilder(
+            builder: (ctx, constraints) {
+              return Column(
+                children: [
+                  Text(
+                    "No Transactions",
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 15),
+                    height: constraints.maxHeight * 0.6,
+                    child: Image.asset(
+                      "assets/images/waiting.png",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              );
+            },
           )
         : NotificationListener<OverscrollIndicatorNotification>(
             onNotification: (overScroll) {

@@ -57,8 +57,15 @@ class _NewTransactionState extends State<NewTransaction> {
       },
       child: SingleChildScrollView(
         child: Card(
+          elevation: 10,
           child: Container(
-            height: MediaQuery.of(context).size.height * .5,
+            // height: MediaQuery.of(context).size.height * .5,
+            padding: EdgeInsets.only(
+              top: 10,
+              left: 10,
+              right: 10,
+              bottom: MediaQuery.of(context).viewInsets.bottom + 10,
+            ),
             child: Column(
               children: [
                 TextField(
@@ -125,7 +132,6 @@ class _NewTransactionState extends State<NewTransaction> {
               ],
               crossAxisAlignment: CrossAxisAlignment.end,
             ),
-            padding: EdgeInsets.all(10),
           ),
         ),
       ),
