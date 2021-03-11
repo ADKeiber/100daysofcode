@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:finance_tracker/widgets/adaptive_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 // import 'package:flutter/services.dart';
@@ -58,7 +59,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _statAddNewTransaction(BuildContext ctx) {
+  void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
       context: ctx,
       builder: (_) {
@@ -73,20 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  final List<Transaction> _userTransactions = [
-    // Transaction(
-    //   id: 't1',
-    //   title: "New shoes",
-    //   cost: 45.89,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: "Socks",
-    //   cost: 10.01,
-    //   date: DateTime.now(),
-    // ),
-  ];
+  final List<Transaction> _userTransactions = [];
   void _addNewTransaction(String txTitle, double txCost, DateTime chosenDate) {
     final newTx = Transaction(
       id: DateTime.now().toString(),
@@ -115,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
 
-    final PreferredSize appBar = Platform.isIOS
+    final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
             middle: Text("Personal Expenses"),
             trailing: Row(
@@ -123,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 CupertinoButton(
                   child: Icon(CupertinoIcons.add),
-                  onPressed: () => _statAddNewTransaction(context),
+                  onPressed: () => _startAddNewTransaction(context),
                 ),
               ],
             ),
@@ -135,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
             actions: [
               IconButton(
                 icon: Icon(Icons.add),
-                onPressed: () => _statAddNewTransaction(context),
+                onPressed: () => _startAddNewTransaction(context),
               ),
             ],
           );
@@ -195,21 +183,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
-    return Container(
-      child: Platform.isIOS
-          ? CupertinoPageScaffold(child: pageBody)
-          : Scaffold(
-              appBar: appBar,
-              body: pageBody,
-              floatingActionButton: Platform.isIOS
-                  ? Container()
-                  : FloatingActionButton(
-                      child: Icon(Icons.add),
-                      onPressed: () => _statAddNewTransaction(context),
-                    ),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.centerFloat,
-            ),
-    );
+    return AdaptiveScaffold(appBar, pageBody, _startAddNewTransaction);
   }
 }
