@@ -4,14 +4,22 @@ import 'package:intl/intl.dart';
 import '../models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
+  //list that contains all user transactions
   final List<Transaction> _userTransactions;
 
+  //function used to delete a transaction from user transactions
   final Function deleteTx;
 
+  //constructor
   TransactionList(this._userTransactions, this.deleteTx);
   @override
   Widget build(BuildContext context) {
+    //conditional to determine if there are any user transactions. If there isn't
+    //any then they would display no list but would otherwise
     return _userTransactions.isEmpty
+
+        //returns a Layoutbuilder with text saying no transactions and an image
+        //of sleeping Z's because there is nothing exciting happeneing
         ? LayoutBuilder(
             builder: (ctx, constraints) {
               return Column(
@@ -32,6 +40,8 @@ class TransactionList extends StatelessWidget {
               );
             },
           )
+        //List for displaying user transactions wrapped in a notification
+        //listener where overscroll glow is deactivated
         : NotificationListener<OverscrollIndicatorNotification>(
             onNotification: (overScroll) {
               overScroll.disallowGlow();
@@ -46,6 +56,7 @@ class TransactionList extends StatelessWidget {
                     horizontal: 5,
                   ),
                   child: ListTile(
+                    //contains amount for transaction
                     leading: CircleAvatar(
                       radius: 30,
                       child: Padding(
@@ -57,13 +68,16 @@ class TransactionList extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //contains the name of the transaction
                     title: Text(
                       _userTransactions[index].title,
                       style: Theme.of(context).textTheme.headline6,
                     ),
+                    //text below main text that contains the date of the transaciton
                     subtitle: Text(
                       DateFormat.yMMMd().format(_userTransactions[index].date),
                     ),
+                    //icon used to delete transaction
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
                       color: Theme.of(context).errorColor,
@@ -71,50 +85,6 @@ class TransactionList extends StatelessWidget {
                     ),
                   ),
                 );
-
-                //   Card(
-                //     child: Row(
-                //       children: [
-                //         Container(
-                //           child: Text(
-                //             " \$${_userTransactions[index].cost.toStringAsFixed(2)}",
-                //             style: TextStyle(
-                //               fontWeight: FontWeight.bold,
-                //               fontSize: 20,
-                //               color: Theme.of(context).primaryColor,
-                //             ),
-                //           ),
-                //           margin: EdgeInsets.symmetric(
-                //             vertical: 10,
-                //             horizontal: 15,
-                //           ),
-                //           decoration: BoxDecoration(
-                //             border: Border.all(
-                //               color: Theme.of(context).primaryColor,
-                //               width: 2,
-                //             ),
-                //           ),
-                //           padding: EdgeInsets.all(10),
-                //         ),
-                //         Column(
-                //           children: [
-                //             Text(
-                //               _userTransactions[index].title,
-                //               style: Theme.of(context).textTheme.headline6,
-                //             ),
-                //             Text(
-                //               DateFormat('MM/dd/yyyy')
-                //                   .format(_userTransactions[index].date),
-                //               style: TextStyle(
-                //                 color: Colors.grey,
-                //               ),
-                //             ),
-                //           ],
-                //           crossAxisAlignment: CrossAxisAlignment.start,
-                //         ),
-                //       ],
-                //     ),
-                //   );
               },
               itemCount: _userTransactions.length,
             ),
