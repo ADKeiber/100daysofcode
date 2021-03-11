@@ -3,11 +3,17 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class AdaptiveAppBar extends StatelessWidget {
+class AdaptiveAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Function _startAddNewTransaction;
-  AdaptiveAppBar(this._startAddNewTransaction);
+  final BuildContext ctx;
+  Size get preferredSize {
+    return new Size.fromHeight(MediaQuery.of(ctx).size.height * .075);
+  }
+
+  AdaptiveAppBar(this._startAddNewTransaction, this.ctx);
   @override
   Widget build(BuildContext context) {
+    // final double MediaQuery.of(context).size;
     return Platform.isIOS
         ? CupertinoNavigationBar(
             middle: Text("Personal Expenses"),

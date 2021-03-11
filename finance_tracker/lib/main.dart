@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:finance_tracker/widgets/adaptive_appbar.dart';
 import 'package:finance_tracker/widgets/adaptive_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -103,30 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
 
-    final PreferredSizeWidget appBar = Platform.isIOS
-        ? CupertinoNavigationBar(
-            middle: Text("Personal Expenses"),
-            trailing: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                CupertinoButton(
-                  child: Icon(CupertinoIcons.add),
-                  onPressed: () => _startAddNewTransaction(context),
-                ),
-              ],
-            ),
-          )
-        : AppBar(
-            title: Text(
-              "Personal Expenses",
-            ),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.add),
-                onPressed: () => _startAddNewTransaction(context),
-              ),
-            ],
-          );
+    final PreferredSizeWidget appBar =
+        AdaptiveAppBar(_startAddNewTransaction, context);
 
     final txListWidget = Container(
       height: (mediaQuery.size.height -
