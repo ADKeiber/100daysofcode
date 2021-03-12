@@ -8,7 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Midwest Composite',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -29,11 +30,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: size.height * .05,
+            title: Text("hello there"),
+            flexibleSpace: Image.asset("assets/MWCOMPOSITES.PNG"),
+            floating: true,
+          ),
+        ],
       ),
-      body: null,
     );
   }
 }
