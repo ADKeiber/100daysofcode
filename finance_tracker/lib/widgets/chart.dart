@@ -5,10 +5,13 @@ import './chart_bar.dart';
 import '../models/transaction.dart';
 
 class Chart extends StatelessWidget {
+  //shows transactions that were during this last week
   final List<Transaction> recentTransactions;
 
   Chart(this.recentTransactions);
 
+  //gets a list of the last week including the total amount
+  //and day in which the transactions occured
   List<Map<String, Object>> get groupedTransactionValues {
     return List.generate(7, (index) {
       final weekDay = DateTime.now().subtract(
@@ -39,16 +42,20 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //contains entire chart
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
       child: Padding(
         padding: EdgeInsets.all(10),
         child: Row(
+          //spaces out all of the week days to fill the card
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: groupedTransactionValues.map((data) {
             return Flexible(
               fit: FlexFit.tight,
+              //contains each bar and has entire amount spent that day and
+              //the first 3 letters to represent the day
               child: ChartBar(
                 label: data["day"],
                 spendingAmount: data["cost"],
