@@ -16,4 +16,15 @@ finance_tracker/.gitignore
 finance_tracker/.metadata
 finance_tracker/build/*
 finance_tracker/.packages
+
+
+mwcomposite/.dart_tool/*
+mwcomposite/.idea/*
+mwcomposite/android/*
+mwcomposite/ios/*
+mwcomposite/test/*
+mwcomposite/.gitignore
+mwcomposite/.metadata
+mwcomposite/build/*
+mwcomposite/.packages
 .vscode/launch.json
