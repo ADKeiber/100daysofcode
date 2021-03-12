@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 class AdaptiveAppBar extends StatelessWidget implements PreferredSizeWidget {
+  //contains a function that allows for the creation of a new transaction
   final Function _startAddNewTransaction;
   final BuildContext ctx;
   Size get preferredSize {
@@ -13,7 +14,8 @@ class AdaptiveAppBar extends StatelessWidget implements PreferredSizeWidget {
   AdaptiveAppBar(this._startAddNewTransaction, this.ctx);
   @override
   Widget build(BuildContext context) {
-    // final double MediaQuery.of(context).size;
+    //adaptive widget that either shows a cupertino navigation bar (IOS) or
+    //appbar (android)
     return Platform.isIOS
         ? CupertinoNavigationBar(
             middle: Text("Personal Expenses"),
