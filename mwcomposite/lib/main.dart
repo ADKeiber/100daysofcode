@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mwcomposite/widgets/main_header.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,20 +29,95 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  ScrollController _scrollController;
+  double position = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController()
+      ..addListener(() {
+        // print("offset = ${_scrollController.offset}");
+        setState(() {
+          position = _scrollController.offset;
+        });
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: CustomScrollView(
+        controller: _scrollController,
         slivers: [
           SliverAppBar(
-            expandedHeight: size.height * .05,
-            title: Text("hello there"),
-            flexibleSpace: Image.asset("assets/MWCOMPOSITES.PNG"),
+            backgroundColor: Colors.white,
+            expandedHeight: size.height * 0.11,
+            flexibleSpace: Container(
+              height: double.infinity,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  position < size.height * .075
+                      ? Image.asset(
+                          "assets/MWCOMPOSITES.PNG",
+                        )
+                      : Image.asset(
+                          "assets/MWCOMPOSITES-LOGO.PNG",
+                        ),
+                ],
+              ),
+            ),
             floating: true,
+            pinned: true,
+            snap: true,
+          ),
+          // SliverPersistentHeader(
+          //   floating: true,
+          //   pinned: true,
+          //   delegate: MainHeader(
+          //     min: size.height * 0.05,
+          //     max: size.height * 0.1,
+          //   ),
+          // ),
+          // SliverFillRemaining(),
+          SliverToBoxAdapter(
+            child: Container(
+              height: size.height * 0.5,
+              color: Colors.green,
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Section 1', style: TextStyle(fontSize: 24)),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              height: size.height * 0.5,
+              color: Colors.yellow,
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Section 2', style: TextStyle(fontSize: 24)),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              height: size.height * 0.5,
+              color: Colors.blue,
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Section 3', style: TextStyle(fontSize: 24)),
+            ),
           ),
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _scrollController
+        .dispose(); // it is a good practice to dispose the controller
+    super.dispose();
   }
 }
