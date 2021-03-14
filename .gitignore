@@ -27,4 +27,14 @@ mwcomposite/.gitignore
 mwcomposite/.metadata
 mwcomposite/build/*
 mwcomposite/.packages
+
+basics/.dart_tool/*
+basics/.idea/*
+basics/android/*
+basics/ios/*
+basics/test/*
+basics/.gitignore
+basics/.metadata
+basics/build/*
+basics/.packages
 .vscode/launch.json
