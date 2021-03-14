@@ -27,4 +27,5 @@ mwcomposite/.gitignore
 mwcomposite/.metadata
 mwcomposite/build/*
 mwcomposite/.packages
+mwcomposite/pubspec.lock
 .vscode/launch.json
