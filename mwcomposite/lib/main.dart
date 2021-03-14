@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mwcomposite/widgets/main_header.dart';
+// import 'package:mwcomposite/widgets/main_header.dart';
+
+import 'package:smooth_scroll_web/smooth_scroll_web.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,11 +51,41 @@ class _MyHomePageState extends State<MyHomePage> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: CustomScrollView(
+        // physics: NeverScrollableScrollPhysics(),
+        // physics: BouncingScrollPhysics(),
+        physics: ClampingScrollPhysics(),
+        // physics: AlwaysScrollableScrollPhysics(),
         controller: _scrollController,
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.white,
             expandedHeight: size.height * 0.11,
+            actions: [
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "page1",
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "page3",
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "page2",
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "page4",
+                ),
+              ),
+            ],
             flexibleSpace: Container(
               height: double.infinity,
               child: Row(
@@ -69,6 +101,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       : Image.asset(
                           "assets/MWCOMPOSITES-LOGO.PNG",
                         ),
+                  SizedBox(
+                    width: 20,
+                  ),
                 ],
               ),
             ),
