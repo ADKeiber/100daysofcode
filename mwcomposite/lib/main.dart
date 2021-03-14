@@ -60,36 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverAppBar(
             backgroundColor: Colors.white,
             expandedHeight: size.height * 0.11,
-            actions: [
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "page1",
-                ),
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "page3",
-                ),
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "page2",
-                ),
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  "page4",
-                ),
-              ),
-            ],
+            actions: [],
             flexibleSpace: Container(
               height: double.infinity,
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                // main
                 children: [
                   SizedBox(
                     width: 20,
@@ -103,6 +79,30 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                   SizedBox(
                     width: 20,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "page1",
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "page3",
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "page2",
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "page4",
+                    ),
                   ),
                 ],
               ),
