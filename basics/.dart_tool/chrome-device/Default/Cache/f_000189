@@ -1,0 +1,384 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/basics/widgets/navigation_bar/navbar_logo.dart', 'packages/responsive_builder/src/widget_builders.dart', 'packages/basics/widgets/navigation_bar/navigation_bar_mobile.dart', 'packages/flutter/src/painting/strut_style.dart'], (function load__packages__basics__widgets__navigation_bar__navigation_bar_tablet_desktop_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__flex$46dart, packages__basics__widgets__navigation_bar__navbar_logo$46dart, packages__responsive_builder__src__widget_builders$46dart, packages__basics__widgets__navigation_bar__navigation_bar_mobile$46dart, packages__flutter__src__painting__strut_style$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const navbar_logo = packages__basics__widgets__navigation_bar__navbar_logo$46dart.widgets__navigation_bar__navbar_logo;
+  const widget_builders = packages__responsive_builder__src__widget_builders$46dart.src__widget_builders;
+  const navigation_bar_mobile = packages__basics__widgets__navigation_bar__navigation_bar_mobile$46dart.widgets__navigation_bar__navigation_bar_mobile;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  var navigation_bar_tablet_desktop = Object.create(dart.library);
+  var navigation_bar = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.constList([], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 16,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar_tablet_desktop.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 26,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4], T._LocationL());
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 20,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar_tablet_desktop.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 21,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar_tablet_desktop.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 26,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 24,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar_tablet_desktop.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 13,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13, C[14] || CT.C14], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar_tablet_desktop.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 14,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 15,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 13,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar_tablet_desktop.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 7,
+        [_Location_line]: 12,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 13,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 11,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar_tablet_desktop.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 13,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 14,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mobile",
+        [_Location_column]: 7,
+        [_Location_line]: 13,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "tablet",
+        [_Location_column]: 7,
+        [_Location_line]: 14,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.constList([C[27] || CT.C27, C[28] || CT.C28], T._LocationL());
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[26] || CT.C26,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 12,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 7,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 7,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.constList([C[31] || CT.C31, C[32] || CT.C32], T._LocationL());
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[30] || CT.C30,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 25,
+        [_Location_file]: "file:///C:/Users/Austin/Documents/GitHub/100DaysOfCode/basics/lib/widgets/navigation_bar/navigation_bar.dart"
+      });
+    }
+  }, false);
+  var C = Array(33).fill(void 0);
+  var I = [
+    "package:basics/widgets/navigation_bar/navigation_bar_tablet_desktop.dart",
+    "package:basics/widgets/navigation_bar/navigation_bar.dart"
+  ];
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  navigation_bar_tablet_desktop.NavigationBarTabletDesktop = class NavigationBarTabletDesktop extends framework.StatelessWidget {
+    build(context) {
+      return new container.Container.new({height: 100.0, child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T.JSArrayOfWidgetL().of([new navbar_logo.NavBarLogo.new({$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new basic.Row.new({mainAxisSize: flex.MainAxisSize.min, children: T.JSArrayOfWidgetL().of([new navigation_bar.NavBarItem.new("Episodes", {$creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), new basic.SizedBox.new({width: 60.0, $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), new navigation_bar.NavBarItem.new("About", {$creationLocationd_0dea112b090073317d4: C[8] || CT.C8})]), $creationLocationd_0dea112b090073317d4: C[11] || CT.C11})]), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15}), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19});
+    }
+  };
+  (navigation_bar_tablet_desktop.NavigationBarTabletDesktop.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    navigation_bar_tablet_desktop.NavigationBarTabletDesktop.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = navigation_bar_tablet_desktop.NavigationBarTabletDesktop.prototype;
+  dart.addTypeTests(navigation_bar_tablet_desktop.NavigationBarTabletDesktop);
+  dart.addTypeCaches(navigation_bar_tablet_desktop.NavigationBarTabletDesktop);
+  dart.setMethodSignature(navigation_bar_tablet_desktop.NavigationBarTabletDesktop, () => ({
+    __proto__: dart.getMethods(navigation_bar_tablet_desktop.NavigationBarTabletDesktop.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(navigation_bar_tablet_desktop.NavigationBarTabletDesktop, I[0]);
+  navigation_bar.NavigationBar = class NavigationBar extends framework.StatelessWidget {
+    build(context) {
+      return new widget_builders.ScreenTypeLayout.new({mobile: new navigation_bar_mobile.NavigationBarMobile.new({$creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), tablet: new navigation_bar_tablet_desktop.NavigationBarTabletDesktop.new({$creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[25] || CT.C25});
+    }
+  };
+  (navigation_bar.NavigationBar.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    navigation_bar.NavigationBar.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = navigation_bar.NavigationBar.prototype;
+  dart.addTypeTests(navigation_bar.NavigationBar);
+  dart.addTypeCaches(navigation_bar.NavigationBar);
+  dart.setMethodSignature(navigation_bar.NavigationBar, () => ({
+    __proto__: dart.getMethods(navigation_bar.NavigationBar.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(navigation_bar.NavigationBar, I[1]);
+  var title$ = dart.privateName(navigation_bar, "NavBarItem.title");
+  navigation_bar.NavBarItem = class NavBarItem extends framework.StatelessWidget {
+    get title() {
+      return this[title$];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    build(context) {
+      return new text.Text.new(this.title, {style: new text_style.TextStyle.new({fontSize: 18.0}), $creationLocationd_0dea112b090073317d4: C[29] || CT.C29});
+    }
+  };
+  (navigation_bar.NavBarItem.new = function(title, opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[title$] = title;
+    navigation_bar.NavBarItem.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = navigation_bar.NavBarItem.prototype;
+  dart.addTypeTests(navigation_bar.NavBarItem);
+  dart.addTypeCaches(navigation_bar.NavBarItem);
+  dart.setMethodSignature(navigation_bar.NavBarItem, () => ({
+    __proto__: dart.getMethods(navigation_bar.NavBarItem.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(navigation_bar.NavBarItem, I[1]);
+  dart.setFieldSignature(navigation_bar.NavBarItem, () => ({
+    __proto__: dart.getFields(navigation_bar.NavBarItem.__proto__),
+    title: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/basics/widgets/navigation_bar/navigation_bar_tablet_desktop.dart", {
+    "package:basics/widgets/navigation_bar/navigation_bar_tablet_desktop.dart": navigation_bar_tablet_desktop,
+    "package:basics/widgets/navigation_bar/navigation_bar.dart": navigation_bar
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["navigation_bar_tablet_desktop.dart","navigation_bar.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAS4B;AACxB,YAAO,sCACG,cACD,sCACgC,+CAC3B,yBACR,yFACA,iCAC6B,iCACjB,yBACR,kCAAW,sEACX,+BACS,+DAET,kCAAW;IAMvB;;;QAvBsC;;AAAQ,4FAAW,GAAG;;EAAC;;;;;;;;;UCInC;AACxB,YAAO,mDACG,sHACA;IAEZ;;;QARyB;;AAAQ,gEAAW,GAAG;;EAAC;;;;;;;;;;IAYnC;;;;;;UAIa;AACxB,YAAO,mBACL,oBACO,wCACK;IAGhB;;4CAVgB;;;AAAhB;;EAAsB","file":"../../../../../../../../../packages/basics/widgets/navigation_bar/navigation_bar_tablet_desktop.dart.lib.js"}');
+  // Exports:
+  return {
+    widgets__navigation_bar__navigation_bar_tablet_desktop: navigation_bar_tablet_desktop,
+    widgets__navigation_bar__navigation_bar: navigation_bar
+  };
+}));
+
+//# sourceMappingURL=navigation_bar_tablet_desktop.dart.lib.js.map

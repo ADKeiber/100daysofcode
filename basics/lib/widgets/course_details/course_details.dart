@@ -8,17 +8,9 @@ class CourseDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       var textAlignment =
-          sizingInformation.deviceScreenType == DeviceScreenType.desktop
-              ? TextAlign.left
-              : TextAlign.center;
-      double titleSize =
-          sizingInformation.deviceScreenType == DeviceScreenType.desktop
-              ? 80
-              : 50;
-      double descriptionSize =
-          sizingInformation.deviceScreenType == DeviceScreenType.desktop
-              ? 21
-              : 16;
+          sizingInformation.isDesktop ? TextAlign.left : TextAlign.center;
+      double titleSize = sizingInformation.isDesktop ? 80 : 50;
+      double descriptionSize = sizingInformation.isDesktop ? 21 : 16;
 
       return Container(
         width: 600,
