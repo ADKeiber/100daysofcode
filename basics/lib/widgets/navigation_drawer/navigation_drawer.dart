@@ -1,3 +1,4 @@
+import 'package:basics/routing/route_names.dart';
 import 'package:basics/widgets/navigation_drawer/drawer_item.dart';
 import 'package:basics/widgets/navigation_drawer/navigation_drawer_header.dart';
 import 'package:flutter/material.dart';
@@ -24,10 +25,12 @@ class NavigationDrawer extends StatelessWidget {
           DrawerItem(
             title: "Episodes",
             icon: Icons.videocam,
+            navPath: EpisodesRoute,
           ),
           DrawerItem(
             title: "About",
             icon: Icons.help,
+            navPath: AboutRoute,
           ),
         ],
       ),

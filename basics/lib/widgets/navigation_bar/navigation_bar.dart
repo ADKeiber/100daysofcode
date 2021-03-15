@@ -1,6 +1,8 @@
+import 'package:basics/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import '../../locator.dart';
 import 'navigation_bar_mobile.dart';
 import './navigation_bar_tablet_desktop.dart';
 
@@ -17,15 +19,21 @@ class NavigationBar extends StatelessWidget {
 }
 
 class NavBarItem extends StatelessWidget {
+  final String navPath;
   final String title;
-  NavBarItem(this.title);
+  NavBarItem(this.title, this.navPath);
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: TextStyle(
-        fontSize: 18,
+    return GestureDetector(
+      onTap: () {
+        locator<NavigationService>().navigateTo(navPath);
+      },
+      child: Text(
+        title,
+        style: TextStyle(
+          fontSize: 18,
+        ),
       ),
     );
   }
