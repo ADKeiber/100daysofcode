@@ -1,12 +1,10 @@
 import 'package:basics/views/home/home_contents_desktop.dart';
 import 'package:basics/views/home/home_contents_mobile.dart';
-import 'package:basics/widgets/call_to_action/call_to_action.dart';
 import 'package:basics/widgets/center_view/center_view.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../widgets/center_view/center_view.dart';
-import '../../widgets/course_details/course_details.dart';
 import '../../widgets/navigation_bar/navigation_bar.dart';
 
 class HomeView extends StatelessWidget {
