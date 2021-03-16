@@ -4,6 +4,7 @@ import './navbar_logo.dart';
 
 import 'package:basics/widgets/navbar_item/navbar_item.dart';
 
+///Widget for navigation bar that is for desktop sizing
 class NavigationBarTabletDesktop extends StatelessWidget {
   const NavigationBarTabletDesktop({Key key}) : super(key: key);
 

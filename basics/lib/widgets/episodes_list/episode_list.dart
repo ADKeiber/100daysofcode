@@ -3,6 +3,7 @@ import 'package:basics/datamodels/episode_item_model.dart';
 
 import 'episode_item.dart';
 
+///Widget contains all the information for the episodes
 class EpisodesList extends StatelessWidget {
   final episodes = [
     EpisodeItemModel(

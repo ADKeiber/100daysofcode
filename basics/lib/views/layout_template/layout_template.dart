@@ -9,6 +9,7 @@ import 'package:basics/widgets/center_view/center_view.dart';
 import '../../widgets/navigation_bar/navigation_bar.dart';
 import '../../routing/route_names.dart';
 
+///Widget used to setup the overall design of the application
 class LayoutTemplate extends StatelessWidget {
   const LayoutTemplate({Key key}) : super(key: key);
 
@@ -17,6 +18,7 @@ class LayoutTemplate extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (ctx, info) {
         return Scaffold(
+          //shows a drawer if page is not desktop sized else null
           drawer: info.isDesktop ? null : NavigationDrawer(),
           backgroundColor: Colors.white,
           body: CenteredView(

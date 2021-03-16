@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:basics/datamodels/navbar_item_model.dart';
 
+///Widget contains navigation bar item for desktop sizing
 class NavBarItemTabletDesktop extends StatelessWidget {
   final NavBarItemModel model;
   NavBarItemTabletDesktop({this.model});

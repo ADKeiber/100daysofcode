@@ -3,6 +3,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import 'package:basics/styles/text_styles.dart';
 
+///Widget used to display course details and is responsive to tablet and desktop
 class CourseDetails extends StatelessWidget {
   const CourseDetails({Key key}) : super(key: key);
 
@@ -11,7 +12,6 @@ class CourseDetails extends StatelessWidget {
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       var textAlignment =
           sizingInformation.isDesktop ? TextAlign.left : TextAlign.center;
-      double descriptionSize = sizingInformation.isDesktop ? 21 : 16;
 
       return Container(
         width: 600,

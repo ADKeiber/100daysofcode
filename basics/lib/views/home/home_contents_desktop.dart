@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:basics/widgets/call_to_action/call_to_action.dart';
 import 'package:basics/widgets/course_details/course_details.dart';
 
+///Widget Used for desktop sizing of the main widget
 class HomeContentDesktop extends StatelessWidget {
   const HomeContentDesktop({Key key}) : super(key: key);
 

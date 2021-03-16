@@ -3,6 +3,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:basics/datamodels/season_details_model.dart';
 import 'package:basics/styles/text_styles.dart';
 
+///Widget that displays the seasons details and is for mobile sizing
 class SeasonDetailsMobile extends StatelessWidget {
   final SeasonDetailsModel details;
   const SeasonDetailsMobile({Key key, this.details}) : super(key: key);

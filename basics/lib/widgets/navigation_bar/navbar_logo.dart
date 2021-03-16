@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+///Widget that contains the main logo in navigation bar
 class NavBarLogo extends StatelessWidget {
   const NavBarLogo({Key key}) : super(key: key);
 

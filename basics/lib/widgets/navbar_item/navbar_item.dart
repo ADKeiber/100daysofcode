@@ -6,6 +6,8 @@ import 'package:basics/services/navigation_service.dart';
 import 'package:basics/widgets/navbar_item/navbar_item_desktop.dart';
 import 'package:basics/widgets/navbar_item/navbar_item_mobile.dart';
 
+///Widget that is adaptive to mobile and desktop sizing and
+///contains navigation bar item
 class NavBarItem extends StatelessWidget {
   final String title;
   final String navPath;

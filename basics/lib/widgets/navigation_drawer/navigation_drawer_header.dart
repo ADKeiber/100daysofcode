@@ -1,6 +1,8 @@
 import 'package:basics/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
+///Widget that contains the navigation drawer that can only be accessed
+///when in mobile sizing
 class NavigationDrawerHeader extends StatelessWidget {
   const NavigationDrawerHeader({Key key}) : super(key: key);
 

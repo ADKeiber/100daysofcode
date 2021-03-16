@@ -3,6 +3,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:basics/datamodels/season_details_model.dart';
 import 'package:basics/styles/text_styles.dart';
 
+///Widget that displays the seasons details and is for desktop sizing
 class SeasonDetailsDesktop extends StatelessWidget {
   final SeasonDetailsModel details;
   const SeasonDetailsDesktop({Key key, this.details}) : super(key: key);

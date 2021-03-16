@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'navbar_logo.dart';
 
+///Widget for navigation bar that is for mobile sizing
 class NavigationBarMobile extends StatelessWidget {
   const NavigationBarMobile({Key key}) : super(key: key);
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:basics/datamodels/navbar_item_model.dart';
 
+///Widget contains navigation bar item for mobile sizing
 class NavBarItemMobile extends StatelessWidget {
   final NavBarItemModel model;
   NavBarItemMobile({this.model});

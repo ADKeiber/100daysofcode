@@ -6,6 +6,7 @@ import 'package:basics/views/home/home_view.dart';
 import 'package:basics/views/about/about_view.dart';
 import 'package:basics/views/episodes/episodes_view.dart';
 
+/// returns a view depending on the route given
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case HomeRoute:

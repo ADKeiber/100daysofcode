@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+///Class that contains the view for the about section
 class AboutView extends StatelessWidget {
   const AboutView({Key key}) : super(key: key);
 

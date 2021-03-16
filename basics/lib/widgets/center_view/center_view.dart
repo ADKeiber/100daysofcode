@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+///Widget that centers all views
 class CenteredView extends StatelessWidget {
   final Widget child;
   CenteredView({this.child});

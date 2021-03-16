@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:basics/widgets/navbar_item/navbar_item.dart';
 
+///Widget used for navigation drawer and only shows up in mobile sizing
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
 

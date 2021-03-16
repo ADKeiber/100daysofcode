@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:basics/datamodels/episode_item_model.dart';
 
+///Widget used to build an episode
 class EpisodeItem extends StatelessWidget {
   final EpisodeItemModel model;
   const EpisodeItem({
