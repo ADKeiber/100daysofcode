@@ -11,10 +11,10 @@ class CallToAction extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: CallToActionMobile(
-        title: "Join Course",
+        title: title,
       ),
       tablet: CallToActionDesktop(
-        title: "Join Course",
+        title: title,
       ),
     );
   }

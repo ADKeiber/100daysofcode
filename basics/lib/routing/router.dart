@@ -35,10 +35,12 @@ class _FadeRoute extends PageRouteBuilder {
             Animation<double> secondAnimation,
           ) =>
               child,
-          transitionsBuilder: (BuildContext context,
-                  Animation<double> animation,
-                  Animation<double> secondAnimation,
-                  Widget child) =>
+          transitionsBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondAnimation,
+            Widget child,
+          ) =>
               FadeTransition(
             opacity: animation,
             child: child,

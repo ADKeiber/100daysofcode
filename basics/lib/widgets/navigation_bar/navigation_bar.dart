@@ -17,24 +17,3 @@ class NavigationBar extends StatelessWidget {
     );
   }
 }
-
-class NavBarItem extends StatelessWidget {
-  final String navPath;
-  final String title;
-  NavBarItem(this.title, this.navPath);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        locator<NavigationService>().navigateTo(navPath);
-      },
-      child: Text(
-        title,
-        style: TextStyle(
-          fontSize: 18,
-        ),
-      ),
-    );
-  }
-}

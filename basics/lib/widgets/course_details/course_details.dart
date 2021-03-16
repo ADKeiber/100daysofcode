@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import 'package:basics/styles/text_styles.dart';
+
 class CourseDetails extends StatelessWidget {
   const CourseDetails({Key key}) : super(key: key);
 
@@ -9,7 +11,6 @@ class CourseDetails extends StatelessWidget {
     return ResponsiveBuilder(builder: (context, sizingInformation) {
       var textAlignment =
           sizingInformation.isDesktop ? TextAlign.left : TextAlign.center;
-      double titleSize = sizingInformation.isDesktop ? 80 : 50;
       double descriptionSize = sizingInformation.isDesktop ? 21 : 16;
 
       return Container(
@@ -20,10 +21,7 @@ class CourseDetails extends StatelessWidget {
           children: [
             Text(
               "Flutter web. \nThe Basics",
-              style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  height: 0.9,
-                  fontSize: titleSize),
+              style: titleTextStyle(sizingInformation.deviceScreenType),
               textAlign: textAlignment,
             ),
             SizedBox(
@@ -31,10 +29,7 @@ class CourseDetails extends StatelessWidget {
             ),
             Text(
               'In this course we will go over the basics of using Flutter Web for website development. Topics will include Responsive Layout, Deploying, Font Changes, Hover Functionality, Modals and more.',
-              style: TextStyle(
-                fontSize: descriptionSize,
-                height: 1.7,
-              ),
+              style: descriptionTextStyle(sizingInformation.deviceScreenType),
               textAlign: textAlignment,
             ),
           ],
