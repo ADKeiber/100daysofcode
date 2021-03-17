@@ -1,0 +1,496 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/provider/src/listenable_provider.dart', 'packages/provider/src/selector.dart'], (function load__packages__provider_architecture___viewmodel_provider_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__provider__src__listenable_provider$46dart, packages__provider__src__selector$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const change_notifier_provider = packages__provider__src__listenable_provider$46dart.src__change_notifier_provider;
+  const consumer = packages__provider__src__selector$46dart.src__consumer;
+  var _viewmodel_provider = Object.create(dart.library);
+  var $toString = dartx.toString;
+  dart._checkModuleNullSafetyMode(false);
+  var T$ = {
+    _ViewModelProviderTypeL: () => (T$._ViewModelProviderTypeL = dart.constFn(dart.legacy(_viewmodel_provider._ViewModelProviderType)))(),
+    WidgetL: () => (T$.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    BuildContextL: () => (T$.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    _LocationL: () => (T$._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: _viewmodel_provider._ViewModelProviderType.prototype,
+        [_name$]: "_ViewModelProviderType.WithoutConsumer",
+        index: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: _viewmodel_provider._ViewModelProviderType.prototype,
+        [_name$]: "_ViewModelProviderType.WithConsumer",
+        index: 1
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[0] || CT.C0, C[1] || CT.C1], T$._ViewModelProviderTypeL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 11,
+        [_Location_line]: 112,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5, C[6] || CT.C6], T$._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 111,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider_architecture-1.1.1+1/lib/_viewmodel_provider.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "create",
+        [_Location_column]: 9,
+        [_Location_line]: 118,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9, C[10] || CT.C10], T$._LocationL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 117,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider_architecture-1.1.1+1/lib/_viewmodel_provider.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 11,
+        [_Location_line]: 129,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13, C[14] || CT.C14], T$._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 128,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider_architecture-1.1.1+1/lib/_viewmodel_provider.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 9,
+        [_Location_line]: 127,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 128,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18], T$._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 37,
+        [_Location_line]: 126,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider_architecture-1.1.1+1/lib/_viewmodel_provider.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 9,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22], T$._LocationL());
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 137,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider_architecture-1.1.1+1/lib/_viewmodel_provider.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "create",
+        [_Location_column]: 7,
+        [_Location_line]: 136,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 137,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26], T$._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 135,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider_architecture-1.1.1+1/lib/_viewmodel_provider.dart"
+      });
+    }
+  }, false);
+  var C = Array(27).fill(void 0);
+  var I = [
+    "package:provider_architecture/_viewmodel_provider.dart",
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/provider_architecture-1.1.1+1/lib/_viewmodel_provider.dart"
+  ];
+  var _name$ = dart.privateName(_viewmodel_provider, "_name");
+  _viewmodel_provider._ViewModelProviderType = class _ViewModelProviderType extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (_viewmodel_provider._ViewModelProviderType.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = _viewmodel_provider._ViewModelProviderType.prototype;
+  dart.addTypeTests(_viewmodel_provider._ViewModelProviderType);
+  dart.addTypeCaches(_viewmodel_provider._ViewModelProviderType);
+  dart.setMethodSignature(_viewmodel_provider._ViewModelProviderType, () => ({
+    __proto__: dart.getMethods(_viewmodel_provider._ViewModelProviderType.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(_viewmodel_provider._ViewModelProviderType, I[0]);
+  dart.setFieldSignature(_viewmodel_provider._ViewModelProviderType, () => ({
+    __proto__: dart.getFields(_viewmodel_provider._ViewModelProviderType.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    [_name$]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(_viewmodel_provider._ViewModelProviderType, ['toString']);
+  _viewmodel_provider._ViewModelProviderType.WithoutConsumer = C[0] || CT.C0;
+  _viewmodel_provider._ViewModelProviderType.WithConsumer = C[1] || CT.C1;
+  _viewmodel_provider._ViewModelProviderType.values = C[2] || CT.C2;
+  var staticChild$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.staticChild");
+  var onModelReady$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.onModelReady");
+  var builder$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.builder");
+  var viewModel$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.viewModel");
+  var viewModelBuilder$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.viewModelBuilder");
+  var reuseExisting$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.reuseExisting");
+  var disposeViewModel$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.disposeViewModel");
+  var createNewModelOnInsert$ = dart.privateName(_viewmodel_provider, "ViewModelProvider.createNewModelOnInsert");
+  var providerType = dart.privateName(_viewmodel_provider, "ViewModelProvider.providerType");
+  const _is_ViewModelProvider_default = Symbol('_is_ViewModelProvider_default');
+  _viewmodel_provider.ViewModelProvider$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    var _ViewModelProviderStateOfTL = () => (_ViewModelProviderStateOfTL = dart.constFn(_viewmodel_provider._ViewModelProviderState$(TL())))();
+    class ViewModelProvider extends framework.StatefulWidget {
+      get staticChild() {
+        return this[staticChild$];
+      }
+      set staticChild(value) {
+        super.staticChild = value;
+      }
+      get onModelReady() {
+        return this[onModelReady$];
+      }
+      set onModelReady(value) {
+        super.onModelReady = value;
+      }
+      get builder() {
+        return this[builder$];
+      }
+      set builder(value) {
+        super.builder = value;
+      }
+      get viewModel() {
+        return this[viewModel$];
+      }
+      set viewModel(value) {
+        super.viewModel = value;
+      }
+      get viewModelBuilder() {
+        return this[viewModelBuilder$];
+      }
+      set viewModelBuilder(value) {
+        super.viewModelBuilder = value;
+      }
+      get reuseExisting() {
+        return this[reuseExisting$];
+      }
+      set reuseExisting(value) {
+        super.reuseExisting = value;
+      }
+      get disposeViewModel() {
+        return this[disposeViewModel$];
+      }
+      set disposeViewModel(value) {
+        super.disposeViewModel = value;
+      }
+      get createNewModelOnInsert() {
+        return this[createNewModelOnInsert$];
+      }
+      set createNewModelOnInsert(value) {
+        super.createNewModelOnInsert = value;
+      }
+      get providerType() {
+        return this[providerType];
+      }
+      set providerType(value) {
+        super.providerType = value;
+      }
+      createState() {
+        return new (_ViewModelProviderStateOfTL()).new();
+      }
+    }
+    (ViewModelProvider.withoutConsumer = function(opts) {
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let viewModelBuilder = opts && 'viewModelBuilder' in opts ? opts.viewModelBuilder : null;
+      let onModelReady = opts && 'onModelReady' in opts ? opts.onModelReady : null;
+      let disposeViewModel = opts && 'disposeViewModel' in opts ? opts.disposeViewModel : true;
+      let createNewModelOnInsert = opts && 'createNewModelOnInsert' in opts ? opts.createNewModelOnInsert : false;
+      let viewModel = opts && 'viewModel' in opts ? opts.viewModel : null;
+      let reuseExisting = opts && 'reuseExisting' in opts ? opts.reuseExisting : false;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[builder$] = builder;
+      this[viewModelBuilder$] = viewModelBuilder;
+      this[onModelReady$] = onModelReady;
+      this[disposeViewModel$] = disposeViewModel;
+      this[createNewModelOnInsert$] = createNewModelOnInsert;
+      this[viewModel$] = viewModel;
+      this[reuseExisting$] = reuseExisting;
+      this[providerType] = _viewmodel_provider._ViewModelProviderType.WithoutConsumer;
+      this[staticChild$] = null;
+      ViewModelProvider.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      if (!(this.viewModel != null || this.viewModelBuilder != null)) dart.assertFailed("You have to provide a viewmodel or a viewmodel builder", I[1], 53, 12, "viewModel != null || viewModelBuilder != null");
+    }).prototype = ViewModelProvider.prototype;
+    (ViewModelProvider.withConsumer = function(opts) {
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let viewModelBuilder = opts && 'viewModelBuilder' in opts ? opts.viewModelBuilder : null;
+      let staticChild = opts && 'staticChild' in opts ? opts.staticChild : null;
+      let onModelReady = opts && 'onModelReady' in opts ? opts.onModelReady : null;
+      let disposeViewModel = opts && 'disposeViewModel' in opts ? opts.disposeViewModel : true;
+      let createNewModelOnInsert = opts && 'createNewModelOnInsert' in opts ? opts.createNewModelOnInsert : false;
+      let viewModel = opts && 'viewModel' in opts ? opts.viewModel : null;
+      let reuseExisting = opts && 'reuseExisting' in opts ? opts.reuseExisting : false;
+      let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+      this[builder$] = builder;
+      this[viewModelBuilder$] = viewModelBuilder;
+      this[staticChild$] = staticChild;
+      this[onModelReady$] = onModelReady;
+      this[disposeViewModel$] = disposeViewModel;
+      this[createNewModelOnInsert$] = createNewModelOnInsert;
+      this[viewModel$] = viewModel;
+      this[reuseExisting$] = reuseExisting;
+      this[providerType] = _viewmodel_provider._ViewModelProviderType.WithConsumer;
+      ViewModelProvider.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+      if (!(this.viewModel != null || this.viewModelBuilder != null)) dart.assertFailed("You have to provide a viewmodel or a viewmodel builder", I[1], 70, 12, "viewModel != null || viewModelBuilder != null");
+    }).prototype = ViewModelProvider.prototype;
+    dart.addTypeTests(ViewModelProvider);
+    ViewModelProvider.prototype[_is_ViewModelProvider_default] = true;
+    dart.addTypeCaches(ViewModelProvider);
+    dart.setMethodSignature(ViewModelProvider, () => ({
+      __proto__: dart.getMethods(ViewModelProvider.__proto__),
+      createState: dart.fnType(dart.legacy(_viewmodel_provider._ViewModelProviderState$(dart.legacy(T))), [])
+    }));
+    dart.setLibraryUri(ViewModelProvider, I[0]);
+    dart.setFieldSignature(ViewModelProvider, () => ({
+      __proto__: dart.getFields(ViewModelProvider.__proto__),
+      staticChild: dart.finalFieldType(dart.legacy(framework.Widget)),
+      onModelReady: dart.finalFieldType(dart.legacy(dart.fnType(dart.dynamic, [dart.legacy(T)]))),
+      builder: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext), dart.legacy(T), dart.legacy(framework.Widget)]))),
+      viewModel: dart.finalFieldType(dart.legacy(T)),
+      viewModelBuilder: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(T), []))),
+      reuseExisting: dart.finalFieldType(dart.legacy(core.bool)),
+      disposeViewModel: dart.finalFieldType(dart.legacy(core.bool)),
+      createNewModelOnInsert: dart.finalFieldType(dart.legacy(core.bool)),
+      providerType: dart.finalFieldType(dart.legacy(_viewmodel_provider._ViewModelProviderType))
+    }));
+    return ViewModelProvider;
+  });
+  _viewmodel_provider.ViewModelProvider = _viewmodel_provider.ViewModelProvider$();
+  dart.addTypeTests(_viewmodel_provider.ViewModelProvider, _is_ViewModelProvider_default);
+  var _model = dart.privateName(_viewmodel_provider, "_model");
+  var _createOrSetViewModel = dart.privateName(_viewmodel_provider, "_createOrSetViewModel");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const _is__ViewModelProviderState_default = Symbol('_is__ViewModelProviderState_default');
+  _viewmodel_provider._ViewModelProviderState$ = dart.generic(T => {
+    var TL = () => (TL = dart.constFn(dart.legacy(T)))();
+    var TLTodynamic = () => (TLTodynamic = dart.constFn(dart.fnType(dart.dynamic, [TL()])))();
+    var TLToLdynamic = () => (TLToLdynamic = dart.constFn(dart.legacy(TLTodynamic())))();
+    var ChangeNotifierProviderOfTL = () => (ChangeNotifierProviderOfTL = dart.constFn(change_notifier_provider.ChangeNotifierProvider$(TL())))();
+    var BuildContextLAndTLAndWidgetLToWidgetL = () => (BuildContextLAndTLAndWidgetLToWidgetL = dart.constFn(dart.fnType(T$.WidgetL(), [T$.BuildContextL(), TL(), T$.WidgetL()])))();
+    var BuildContextLAndTLAndWidgetLToLWidgetL = () => (BuildContextLAndTLAndWidgetLToLWidgetL = dart.constFn(dart.legacy(BuildContextLAndTLAndWidgetLToWidgetL())))();
+    var BuildContextLToTL = () => (BuildContextLToTL = dart.constFn(dart.fnType(TL(), [T$.BuildContextL()])))();
+    var ConsumerOfTL = () => (ConsumerOfTL = dart.constFn(consumer.Consumer$(TL())))();
+    class _ViewModelProviderState extends framework.State$(dart.legacy(_viewmodel_provider.ViewModelProvider$(dart.legacy(T)))) {
+      initState() {
+        let t1, t0;
+        super.initState();
+        if (this[_model] == null) {
+          this[_createOrSetViewModel]();
+          if (TLToLdynamic().as(this.widget.onModelReady) != null) {
+            t0 = this.widget;
+            t1 = this[_model];
+            TLToLdynamic().as(t0.onModelReady)(t1);
+          }
+        } else if (dart.test(this.widget.createNewModelOnInsert)) {
+          this[_createOrSetViewModel]();
+        }
+      }
+      [_createOrSetViewModel]() {
+        if (this.widget.viewModelBuilder != null) {
+          this[_model] = this.widget.viewModelBuilder();
+        } else {
+          this[_model] = this.widget.viewModel;
+        }
+      }
+      build(context) {
+        let t3, t2, t1, t0, t3$, t2$, t1$, t0$;
+        if (this.widget.providerType == _viewmodel_provider._ViewModelProviderType.WithoutConsumer) {
+          if (dart.test(this.widget.reuseExisting) || !dart.test(this.widget.disposeViewModel)) {
+            return new (ChangeNotifierProviderOfTL()).value({value: this[_model], child: (t0 = this.widget, t1 = context, t2 = this[_model], t3 = this.widget.staticChild, BuildContextLAndTLAndWidgetLToLWidgetL().as(t0.builder)(t1, t2, t3)), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3});
+          }
+          return new (ChangeNotifierProviderOfTL()).new({create: dart.fn(context => this[_model], BuildContextLToTL()), child: (t0$ = this.widget, t1$ = context, t2$ = this[_model], t3$ = this.widget.staticChild, BuildContextLAndTLAndWidgetLToLWidgetL().as(t0$.builder)(t1$, t2$, t3$)), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7});
+        }
+        if (dart.test(this.widget.reuseExisting) || !dart.test(this.widget.disposeViewModel)) {
+          return new (ChangeNotifierProviderOfTL()).value({value: this[_model], child: new (ConsumerOfTL()).new({builder: BuildContextLAndTLAndWidgetLToLWidgetL().as(this.widget.builder), child: this.widget.staticChild, $creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
+        }
+        return new (ChangeNotifierProviderOfTL()).new({create: dart.fn(context => this[_model], BuildContextLToTL()), child: new (ConsumerOfTL()).new({builder: BuildContextLAndTLAndWidgetLToLWidgetL().as(this.widget.builder), child: this.widget.staticChild, $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23});
+      }
+    }
+    (_ViewModelProviderState.new = function() {
+      this[_model] = null;
+      _ViewModelProviderState.__proto__.new.call(this);
+      ;
+    }).prototype = _ViewModelProviderState.prototype;
+    dart.addTypeTests(_ViewModelProviderState);
+    _ViewModelProviderState.prototype[_is__ViewModelProviderState_default] = true;
+    dart.addTypeCaches(_ViewModelProviderState);
+    dart.setMethodSignature(_ViewModelProviderState, () => ({
+      __proto__: dart.getMethods(_ViewModelProviderState.__proto__),
+      [_createOrSetViewModel]: dart.fnType(dart.void, []),
+      build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+    }));
+    dart.setLibraryUri(_ViewModelProviderState, I[0]);
+    dart.setFieldSignature(_ViewModelProviderState, () => ({
+      __proto__: dart.getFields(_ViewModelProviderState.__proto__),
+      [_model]: dart.fieldType(dart.legacy(T))
+    }));
+    return _ViewModelProviderState;
+  });
+  _viewmodel_provider._ViewModelProviderState = _viewmodel_provider._ViewModelProviderState$();
+  dart.addTypeTests(_viewmodel_provider._ViewModelProviderState, _is__ViewModelProviderState_default);
+  dart.trackLibraries("packages/provider_architecture/_viewmodel_provider.dart", {
+    "package:provider_architecture/_viewmodel_provider.dart": _viewmodel_provider
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["_viewmodel_provider.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAG4D;;oEAAvD;;;;EAAuD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MAI7C;;;;;;MAGK;;;;;;MAG6B;;;;;;MAGvC;;;;;;MAGW;;;;;;MAGR;;;;;;MAKA;;;;;;MAQA;;;;;;MAEkB;;;;;;;AAqCe;MAA4B;;;UAjCvD;UACA;UACV;UACA;UACA;UAEI;UAEA;;MARM;MACA;MACV;MACA;MACA;MAEI;MAEA;MACQ,qBAAyB;MAC1B,qBAAE;AAXpB;AAYE,YAAO,AAAkB,0BAAG,kDACxB;IACN;;UAIiB;UACA;UACV;UACA;UACA;UACA;UAEI;UAEA;;MATM;MACA;MACV;MACA;MACA;MACA;MAEI;MAEA;MACO,qBAAyB;AAX3C;AAYE,YAAO,AAAkB,0BAAG,kDACxB;IACN;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAYmB,QAAX;AAEN,YAAI,AAAO;AACc,UAAvB;AAEA,gCAAI,AAAO;AACkB,iBAA3B;iBAAoB;YAAD,kBAAZ;;cAEJ,eAAI,AAAO;AACO,UAAvB;;MAEJ;;AAGE,YAAI,AAAO;AACyB,UAAlC,eAAS,AAAuB;;AAEP,UAAzB,eAAS,AAAO;;MAEpB;YAG0B;;AACxB,YAAI,AAAO,AAAa,4BAA0B;AAGhD,wBAAI,AAAO,yCAAkB,AAAO;AAClC,kBAA8B,kDACrB,2BACA,kBAAe,OAAO,OAAE,mBAAQ,AAAO,yBAAzB,4CAAP;;AAIlB,gBAAO,iDACG,QAAC,WAAY,kDACd,mBAAe,OAAO,QAAE,oBAAQ,AAAO,yBAAzB,4CAAP;;AAIlB,sBAAI,AAAO,yCAAkB,AAAO;AAGlC,gBAA8B,kDACrB,qBACA,+EACI,AAAO,6BACT,AAAO;;AAKpB,cAAO,iDACG,QAAC,WAAY,2CACd,+EACI,AAAO,6BACT,AAAO;MAGpB;;;MA9DE;;;IA+DJ","file":"../../../../../../packages/provider_architecture/_viewmodel_provider.dart.lib.js"}');
+  // Exports:
+  return {
+    _viewmodel_provider: _viewmodel_provider
+  };
+}));
+
+//# sourceMappingURL=_viewmodel_provider.dart.lib.js.map
