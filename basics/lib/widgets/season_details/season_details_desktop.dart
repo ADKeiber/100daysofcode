@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:provider_architecture/provider_architecture.dart';
+
 import 'package:basics/datamodels/season_details_model.dart';
 import 'package:basics/styles/text_styles.dart';
 
 ///Widget that displays the seasons details and is for desktop sizing
-class SeasonDetailsDesktop extends StatelessWidget {
-  final SeasonDetailsModel details;
-  const SeasonDetailsDesktop({Key key, this.details}) : super(key: key);
-
+class SeasonDetailsDesktop extends ProviderWidget<SeasonDetailsModel> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+    SeasonDetailsModel details,
+  ) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Row(
         mainAxisSize: MainAxisSize.max,
