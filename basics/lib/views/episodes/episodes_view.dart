@@ -4,6 +4,7 @@ import 'package:basics/datamodels/season_details_model.dart';
 import 'package:basics/widgets/episodes_list/episode_list.dart';
 import 'package:basics/widgets/season_details/season_details.dart';
 
+///Widget used for displaying content on the Episodes view
 class EpisodesView extends StatelessWidget {
   const EpisodesView({Key key}) : super(key: key);
 
